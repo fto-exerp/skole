@@ -8,7 +8,10 @@ export class Todo {
     id: number;
 
     @Column({ nullable: true })
-    desc: string;
+    status: boolean;
+
+    @Column({ nullable: true })
+    title: string;
 
     @Column({nullable: true })
     date: string;

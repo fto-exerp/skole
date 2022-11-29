@@ -1,14 +1,10 @@
 <template>
   <Page>
-    <MDBottomNavigation selectedIndex="1">
+    <MDBottomNavigation selectedIndex="0">
       <MDTabStrip>
         <MDTabStripItem>
-          <Label text="Hjem"></Label>
+          <Label text="Todo"></Label>
           <Image src="~/images/home.png"></Image>
-        </MDTabStripItem>
-        <MDTabStripItem class="special">
-          <Label text="El Priser"></Label>
-          <Image src="~/images/graph.png"></Image>
         </MDTabStripItem>
         <MDTabStripItem class="special">
           <Label text="Settings"></Label>
@@ -17,14 +13,8 @@
       </MDTabStrip>
 
       <MDTabContentItem>
-        <GridLayout>
-          <Label text="Hjem Psage" class="h2 text-center"></Label>
-        </GridLayout>
-      </MDTabContentItem>
-      <MDTabContentItem>
         <StackLayout>
-          <Label text="Els Priser" class="h2 text-center"></Label>
-          <Label>{{ name }}</Label>
+
         </StackLayout>
       </MDTabContentItem>
       <MDTabContentItem>
@@ -44,15 +34,10 @@ export default {
     };
   },
   methods: {
-    apiGetData() {
-    },
-    getByDK() {
-        console.log("hello")
-    },
+    apiGetData() {},
   },
-  mounted() {
-    this.getByDK()
-  },
+  mounted() {},
+  components: { StackLayout, Label },
 };
 </script>
 
