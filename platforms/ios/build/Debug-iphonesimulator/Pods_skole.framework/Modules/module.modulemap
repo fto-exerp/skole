@@ -1,6 +1,0 @@
-framework module Pods_skole {
-  umbrella header "Pods-skole-umbrella.h"
-
-  export *
-  module * { export * }
-}

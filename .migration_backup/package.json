@@ -11,7 +11,7 @@
     "nativescript-vue": "~2.9.0"
   },
   "devDependencies": {
-    "@nativescript/ios": "~8.3.0",
+    "@nativescript/ios": "8.2.3",
     "@nativescript/webpack": "~5.0.9",
     "nativescript-vue-template-compiler": "~2.9.0"
   }

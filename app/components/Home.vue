@@ -14,7 +14,7 @@
 
       <MDTabContentItem>
         <StackLayout>
-
+          <Label text="Indstillinger Page" class="h2 text-center"></Label>
         </StackLayout>
       </MDTabContentItem>
       <MDTabContentItem>
