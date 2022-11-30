@@ -43,6 +43,32 @@ router.put("/", async (req: Request, res: Response) => {
   }
 });
 
+router.put("/title", async (req: Request, res: Response) => {
+  try {
+    var result = await TodoService.updateTodoTitle(
+      req.body.id,
+      req.body.title
+    );
+
+    return res.json(result.affected);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.put("/status", async (req: Request, res: Response) => {
+  try {
+    var result = await TodoService.updateTodoStatus(
+      req.body.id,
+      req.body.status
+    );
+
+    return res.json(result.affected);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.delete("/", async (req: Request, res: Response) => {
   try {
     var result = await TodoService.deleteTodo(

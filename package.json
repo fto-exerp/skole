@@ -7,7 +7,6 @@
     "@nativescript-community/ui-material-bottom-navigation": "^7.0.30",
     "@nativescript/core": "~8.3.0",
     "@nativescript/theme": "~3.0.2",
-    "axios": "^1.2.0",
     "nativescript-vue": "~2.9.0"
   },
   "devDependencies": {

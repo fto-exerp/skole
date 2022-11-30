@@ -7,12 +7,9 @@ export class Todo {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ nullable: true })
+    @Column({ nullable: true , default: false})
     status: boolean;
 
     @Column({ nullable: true })
     title: string;
-
-    @Column({nullable: true })
-    date: string;
 }

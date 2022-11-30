@@ -16,7 +16,10 @@ class TodoService {
 
   async getAllTodos() {
     let todo = getRepository(Todo);
-    var result = todo.find()
+    var result = await todo.find()
+
+    result = result.sort((a:any,b:any) => a.title - b.title);
+
     return result;
   }
 
@@ -37,7 +40,24 @@ class TodoService {
     var result = todo.update({id: obj.id},{
       status: obj.status,
       title: obj.title,
-      date: obj.date,
+    })
+
+    return result
+  }
+
+  async updateTodoTitle(id: number,title:string) {
+    let todo = getRepository(Todo)
+    var result = todo.update({id},{
+      title,
+    })
+
+    return result
+  }
+
+  async updateTodoStatus(id: number,status:boolean) {
+    let todo = getRepository(Todo)
+    var result = todo.update({id},{
+      status,
     })
 
     return result
